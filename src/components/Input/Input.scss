@@ -1,0 +1,27 @@
+.chat {
+    &_bottom {
+        display: flex;
+        border-top: 2px solid #D3D3D3;
+        &_input {
+            border: none;
+            border-radius: 0;
+            padding: 5%;
+            width: 80%;
+            font-size: 1.2em;
+        }
+        &_sendButton {
+            color: #fff !important;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 2.2em;
+            background: #2979FF;
+            display: inline-block;
+            border: none;
+            width: 20%;
+        }
+    }
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}

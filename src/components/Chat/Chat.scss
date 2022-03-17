@@ -1,0 +1,40 @@
+.chat {
+    &__outer_cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #1A1A1D;
+    }
+    &__inner_cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: #FFFFFF;
+        border-radius: 8px;
+        height: 60%;
+        width: 35%;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .chat {
+        &__outer_cont {
+            height: 100%;
+        }
+        &__inner_cont {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media (min-width: 480px) and (max-width: 1200px) {
+    .chat {
+
+        &__inner_cont {
+            width: 60%;
+        }
+    }
+}

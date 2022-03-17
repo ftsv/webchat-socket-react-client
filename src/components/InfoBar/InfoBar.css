@@ -1,0 +1,65 @@
+.infoBar__outer_cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #2979FF;
+  border-radius: 4px 4px 0 0;
+  height: 60px;
+  width: 100%;
+}
+
+.infoBar_cont_left_inner {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 5%;
+  color: white;
+}
+
+.infoBar_cont_right_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 5%;
+}
+
+.infoBar_off {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.infoBar_offIcon {
+  font-size: 1.3rem;
+  font-weight: 700;
+  fill: #fa0000;
+}
+/*# sourceMappingURL=InfoBar.css.map */
