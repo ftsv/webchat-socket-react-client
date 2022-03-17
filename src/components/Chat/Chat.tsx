@@ -1,5 +1,5 @@
 import React, { useCallback, useState, useEffect } from 'react';
-import queryString, { ParsedQuery } from 'query-string';
+import queryString from 'query-string';
 import { io, Socket } from 'socket.io-client';
 import { useLocation } from 'react-router-dom';
 import CONFIG from '../../config/config'
@@ -20,7 +20,7 @@ interface ClientToServerEvents {
     hello: () => void;
     join: (
             a: SocketData,
-            callback?: (error?: string) => void
+            callback?: (error?: { error: string }) => void
         ) => void;
     sendMessage: (
             a: string ,
@@ -32,10 +32,6 @@ interface ClientToServerEvents {
 interface SocketData {
     name: string;
     room: string;
-}
-interface Message {
-    user: string;
-    text: string;
 }
 
 let socket: Socket<ServerToClientEvents, ClientToServerEvents> | null = null;
@@ -79,10 +75,10 @@ const Chat = (): JSX.Element => {
             setRoom(room);
 
             socket?.emit('join', { name, room }, 
-            () => {
-                // if (error) {
-                //     alert(error);
-                // }
+            ({ error }) => {
+                if (error) {
+                    alert(error);
+                }
             }
             );
 
