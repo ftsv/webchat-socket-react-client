@@ -20,7 +20,7 @@ interface ClientToServerEvents {
     hello: () => void;
     join: (
             a: SocketData,
-            callback?: (error?: { error: string }) => void
+            callback?: (error: { error: string }) => void
         ) => void;
     sendMessage: (
             a: string ,
